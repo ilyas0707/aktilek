@@ -25,7 +25,7 @@ app.use('/api/course', require('./routes/course.routes'))
 app.use('/api/news', require('./routes/news.routes'))
 app.use('/api/gallery', require('./routes/gallery.routes'))
 
-app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+app.use('/main', express.static(path.join(__dirname, 'client', 'build')))
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
