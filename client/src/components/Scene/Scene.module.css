@@ -1,0 +1,7 @@
+.scene {
+    padding: 30px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+}

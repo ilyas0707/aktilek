@@ -1,0 +1,104 @@
+.mission {
+    padding: 60px 0 116px 0;
+    background: url(../../assets/images/bg1.png) 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.heading {
+    text-align: center;
+    font-size: 64px;
+    color: #5FAFCE;
+    margin-bottom: 73px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.left > p {
+    color: #000;
+    font-size: 18px;
+    padding: 50px 0;
+    margin-bottom: 41px;
+}
+
+.left > a {
+    color: #fff;
+    padding: 8px 24px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 23px;
+    background: #25809D;
+    transition: all .3s;
+}
+
+.left > a:hover {
+    background: #5FAFCE;
+}
+
+.right {
+    width: 48%;
+    text-align: right;
+    position: relative;
+    z-index: 6;
+}
+
+.right::before {
+    content: '';
+    display: inline-block;
+    width: 413px;
+    height: 100%;
+    background: url(../../assets/images/dots1.png) 0 0 no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -110px;
+    right: 50px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 960px) {
+    .block {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .left > p {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right::before {
+        right: 12%;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .heading {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .right > img {
+        width: 100%;
+    }
+}

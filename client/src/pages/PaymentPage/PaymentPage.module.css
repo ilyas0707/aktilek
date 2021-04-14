@@ -1,0 +1,31 @@
+.payment {
+    padding: 60px 0 100px 0;
+    background: url(../../assets/images/bg6.png) 0 0;
+    background-attachment: fixed;
+}
+
+.heading {
+    text-align: center;
+    font-size: 48px;
+    color: #5FAFCE;
+    margin-bottom: 73px;
+}
+
+.block > p {
+    font-size: 36px;
+    color: #000;
+    line-height: 65px;
+}
+
+.block > p:first-child {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .block > p {
+        font-size: 24px;
+        color: #000;
+        line-height: 65px;
+    }
+}

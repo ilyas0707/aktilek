@@ -1,0 +1,30 @@
+.documents {
+    padding: 60px 0 100px 0;
+    background: url(../../assets/images/bg1.png) 0 0;
+    background-attachment: fixed;
+}
+
+.heading {
+    text-align: center;
+    font-size: 48px;
+    color: #5FAFCE;
+    margin-bottom: 73px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    overflow-x: auto;
+}
+
+.image:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .image {
+        justify-content: flex-start;
+    }
+}
