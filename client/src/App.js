@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Styles from './App.module.css'
 import { Header } from './components/Header/Header'
 import { Topline } from './components/Topline/Topline'
@@ -68,7 +68,7 @@ export const App = () => {
 				</div>
 				<Footer />
 			</div>
-			{/* <Redirect to="/main" /> */}
+			<Redirect to="/main" />
 		</Router>
   	)
 }

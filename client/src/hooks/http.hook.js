@@ -32,5 +32,7 @@ export const useHttp = () => {
 
     const clearError = useCallback(() => setError(null), [])
 
-    return { loading, request, error, clearError }
+    const API_URL = `https://aktilek-back.herokuapp.com`
+
+    return { loading, request, error, clearError, API_URL }
 }
