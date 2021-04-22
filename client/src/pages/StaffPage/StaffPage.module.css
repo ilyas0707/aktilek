@@ -97,7 +97,7 @@
 
     .image {
         text-align: center;
-        margin-bottom: 120px;
+        margin-bottom: 60px;
     }
 
     .image > img {
@@ -110,5 +110,14 @@
 
     .fi > .item:nth-child(3n) {
         margin-right: 0;
+    }
+
+    .fullname {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .item {
+        margin-bottom: 70px;
     }
 }

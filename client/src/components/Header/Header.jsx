@@ -33,7 +33,7 @@ export const Header = () => {
         <header className={Styles.header}>
             <div className="container">
                 <div className={Styles.main}>
-                    <NavLink to="/main" className={Styles.logo}>
+                    <NavLink to="/" className={Styles.logo}>
                         <img src={Logo} alt="logo"/>
                     </NavLink>
                     <nav className={`${Styles.menu} ${open ? Styles.active : ''}`}>

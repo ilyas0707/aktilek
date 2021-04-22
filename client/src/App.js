@@ -28,7 +28,7 @@ export const App = () => {
 				<Header />
 				<div className={Styles.scene}>
 					<Switch>
-						<Route path="/main">
+						<Route path="/" exact>
 							<div className={Styles.content}>
 								<Topline />
 								<Mission />
@@ -40,35 +40,34 @@ export const App = () => {
 								<Gallery />
 							</div>
 						</Route>
-						<Route path="/schoolHistory">
+						<Route path="/schoolHistory" exact>
 							<HistoryPage />
 						</Route>
-						<Route path="/teachers">
+						<Route path="/teachers" exact>
 							<StaffPage />
 						</Route>
-						<Route path="/payment">
+						<Route path="/payment" exact>
 							<PaymentPage />
 						</Route>
-						<Route path="/documents">
+						<Route path="/documents" exact>
 							<DocumentsPage />
 						</Route>
-						<Route path="/timetable">
+						<Route path="/timetable" exact>
 							<TimetablePage />
 						</Route>
-						<Route path="/news">
+						<Route path="/news" exact>
 							<NewsPage />
 						</Route>
-						<Route path="/gallery">
+						<Route path="/gallery" exact>
 							<GalleryPage />
 						</Route>
-						<Route path="/courses">
+						<Route path="/courses" exact>
 							<CoursesPage />
 						</Route>
 					</Switch>
 				</div>
 				<Footer />
 			</div>
-			<Redirect to="/main" />
 		</Router>
   	)
 }
