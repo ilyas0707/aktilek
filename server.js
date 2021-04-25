@@ -17,7 +17,10 @@ app.use(
     })
 )
 app.use(morgan('dev'))
-app.use(bodyParser.json({}))
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
+
+app.use(express.urlencoded({ limit: '10mb' }));
 app.use(express.json({ extended: true, limit: '50mb' }))
 app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/staff', require('./routes/staff.routes'))
