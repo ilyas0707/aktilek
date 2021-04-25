@@ -52,6 +52,7 @@
     .topline {
         height: auto;
         padding-top: 150px;
+        background-position: -300px 0;
     }
     .block {
         flex-direction: column-reverse;

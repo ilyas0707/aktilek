@@ -8,7 +8,7 @@ export const Topline = () => {
             <div className="container">
                 <div className={Styles.block}>
                     <div className={Styles.left}>
-                        <NavLink to="/main">Напиши нам</NavLink>
+                        <NavLink to="/contacts">Напиши нам</NavLink>
                         <NavLink to="/timetable">Расписание</NavLink>
                     </div>
                     <div className={Styles.right}>

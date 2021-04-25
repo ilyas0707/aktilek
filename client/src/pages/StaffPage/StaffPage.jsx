@@ -29,16 +29,19 @@ import Face23 from './../../assets/staff/face23.png'
 import Face24 from './../../assets/staff/face24.png'
 import Face25 from './../../assets/staff/face25.png'
 import Face26 from './../../assets/staff/face26.png'
+import Face27 from './../../assets/staff/face27.png'
+import Face28 from './../../assets/staff/face28.png'
 
 export const StaffPage = () => {
     const staff = [
         { imageUrl: Face1, fullname: 'Алиева Гулайим Усеновна', position: 'Директор школы', administration: true },
         { imageUrl: Face2, fullname: 'Махнёва Марина Владимировна', position: 'Заместитель директора по УВР', administration: true },
         { imageUrl: Face3, fullname: 'Шелухина Галина Геннадьевна', position: 'Заместитель директора по воспитательной работе', administration: true },
-        { imageUrl: Face4, fullname: 'Кашкараева Дидан Алмазбекова', position: 'Заместитель директора по УВР начальной школы', administration: true },
+        { imageUrl: Face4, fullname: 'Кашкараева Дидана Алмазбекова', position: 'Заместитель директора по УВР начальной школы', administration: true },
+        { imageUrl: Face27, fullname: 'Бейшенбаева Чинара Акматовна', position: 'Администратор, Библиотекарь', administration: true },
         { imageUrl: Face2, fullname: 'Махнёва Марина Владимировна', position: 'Учитель математики высшей квалификационной категории, заместитель директора по УВР', administration: false },
         { imageUrl: Face3, fullname: 'Шелухина Галина Геннадьевна', position: 'Учитель русского языка и литературы высшей квалификационной категории, заместитель директора по воспитательной работе.', administration: false },
-        { imageUrl: Face4, fullname: 'Кашкараева Дидан Алмазбекова', position: 'Учитель начальных классов высшей квалификационной категории, заместитель директора по УВР начальной школы', administration: false },
+        { imageUrl: Face4, fullname: 'Кашкараева Дидана Алмазбекова', position: 'Учитель начальных классов высшей квалификационной категории, заместитель директора по УВР начальной школы', administration: false },
         { imageUrl: Face5, fullname: 'Елисеева Елена Владимировна', position: 'Учитель математики и информатики высшей квалификационной категории', administration: false },
         { imageUrl: Face6, fullname: 'Эсенбаев Анарбек Исмаилович', position: 'Учитель физики высшей квалификационной категории', administration: false },
         { imageUrl: Face7, fullname: 'Четвертных Нина Петровна', position: 'Учитель начальных классов высшей квалификационной категории, отличник образования', administration: false },
@@ -61,6 +64,7 @@ export const StaffPage = () => {
         { imageUrl: Face24, fullname: 'Рахматов Данияр Рустамович', position: 'Педагог - хореограф', administration: false },
         { imageUrl: Face25, fullname: 'Давлетбаков Саддам Куштарбекович', position: 'Учитель истории и ЧиО', administration: false },
         { imageUrl: Face26, fullname: 'Пугачёва Татьяна Николаевна', position: 'Учитель географии высшей квалификационной категории', administration: false },
+        { imageUrl: Face28, fullname: 'Жолбунов Ишенбек Аширакманович', position: 'Учитель истории. Отличник народного образования КР. Высшая категория.', administration: false }
     ]
 
     return (

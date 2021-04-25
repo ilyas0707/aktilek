@@ -30,7 +30,7 @@ export const Slider = () => {
                             navigation: false
                         }
                     }}
-                    style={{ padding: '0px 90px 90px 90px' }}
+                    style={{ padding: '0px 70px 90px 70px' }}
                 >
                     <SwiperSlide>
                         <div className={Styles.slide}>
