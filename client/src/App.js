@@ -13,7 +13,7 @@ export const App = () => {
 		<AuthContext.Provider value={{
 			token, login, logout, userId, isAuthentificated
 		}}>
-			<Router>
+			<Router onUpdate={() => window.scrollTo(0, 0)}>
 				<div className={Styles.app}>
 					{ isAuthentificated }
 					{ routes }

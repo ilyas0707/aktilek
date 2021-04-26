@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useImport } from '../../hooks/import.hook'
 import Styles from './DocumentsPage.module.css'
 
 export const DocumentsPage = () => {
     const { importAll } = useImport()
     const icons = importAll(require.context('./../../assets/documents', false, /\.(png|jpe?g|svg)$/))
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
 
     return (
         <div className={Styles.documents}>

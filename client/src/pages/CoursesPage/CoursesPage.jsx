@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 // import { useGet } from '../../hooks/get.hook'
 import Styles from './CoursesPage.module.css'
@@ -15,6 +15,13 @@ import Courses8 from './../../assets/courses/courses8.png'
 
 export const CoursesPage = () => {
     // const { data, loading } = useGet('/api/course')
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
 
     const courses = [
         { imageUrl: Courses1, name: 'Плавание' },

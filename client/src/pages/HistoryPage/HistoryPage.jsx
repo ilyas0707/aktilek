@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './HistoryPage.module.css'
 
 import Image from './../../assets/images/history.png'
@@ -6,6 +6,13 @@ import Image2 from './../../assets/images/history2.png'
 // import Dots from './../../assets/images/dots1.png'
 
 export const HistoryPage = () => {
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
+
     return (
         <div className={Styles.history}>
             <div className="container">

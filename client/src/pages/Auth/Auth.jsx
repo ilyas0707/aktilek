@@ -19,6 +19,13 @@ export const Auth = () => {
     const { loading, request, API_URL } = useHttp()
     const [form, setForm] = useState({})
 
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
+
     const changeHandler = event => {
         setForm({ ...form, [event.target.name]: event.target.value })
     }

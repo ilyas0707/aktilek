@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './StaffPage.module.css'
 
 import Dots from './../../assets/images/dots1.png'
@@ -33,6 +33,13 @@ import Face27 from './../../assets/staff/face27.png'
 import Face28 from './../../assets/staff/face28.png'
 
 export const StaffPage = () => {
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
+
     const staff = [
         { imageUrl: Face1, fullname: 'Алиева Гулайим Усеновна', position: 'Директор школы', administration: true },
         { imageUrl: Face2, fullname: 'Махнёва Марина Владимировна', position: 'Заместитель директора по УВР', administration: true },

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import { useGet } from '../../hooks/get.hook'
 import Styles from './GalleryPage.module.css'
 
@@ -13,6 +13,13 @@ import Gallery8 from './../../assets/gallery/image8.png'
 
 export const GalleryPage = () => {
     // const { data, loading } = useGet('/api/gallery')
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
 
     const gallery = [
         { imageUrl: Gallery1 },

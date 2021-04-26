@@ -1,3 +1,7 @@
+.admin {
+    padding-bottom: 30px;
+}
+
 .header {
     height: 100px;
     background: #25809D;
@@ -25,13 +29,6 @@
 
 .icon {
     font-size: 40px;
-    composes: textColor from "../../App.module.css";
-}
-
-.account {
-    font-size: 25px;
-    margin-right: 5px;
-    composes: textColor from "../../App.module.css";
 }
 
 .message {
@@ -125,6 +122,10 @@
 @media screen and (max-width: 500px) {
     .message {
         width: 65%;
+    }
+    .form {
+        width: 100%;
+        padding: 0 20px;
     }
 }
 

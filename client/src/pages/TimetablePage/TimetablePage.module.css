@@ -2,6 +2,7 @@
     padding: 60px 0 100px 0;
     background: url(../../assets/images/bg1.png) 0 0;
     background-attachment: fixed;
+    color: #000;
 }
 
 .heading {
@@ -11,8 +12,97 @@
     margin-bottom: 73px;
 }
 
-.timetable p {
-    font-size: 24px;
-    color: #000;
+.block {
+    display: grid;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(6, 16.666667%);
+    justify-content: center;
+}
+
+.row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #25809D;
+}
+
+.left {
+    padding: 25px 0;
+    background: #ACAFB0;
+    color: #fff;
+}
+
+.top {
+    padding: 25px 0;
+    background: #ACAFB0;
+    color: #fff;
+}
+
+.item {
+    background: #fff;
+}
+
+.item:nth-child(even) {
+    background: #5FAFCE;
+    color: #fff;
+}
+
+.title {
     text-align: center;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab {
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    background: #C4C4C4;
+    padding: 15px 30px;
+    border: 2px solid #949393;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.class {
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+    background: #C4C4C4;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .block {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .row div {
+        padding: 25px 20px;
+    }
+
+    .tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        margin-bottom: 30px;
+    }
+
+    .tab {
+        text-align: center;
+        margin-bottom: 0;
+    }
 }

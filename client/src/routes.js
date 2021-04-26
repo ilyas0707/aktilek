@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Route, Switch } from 'react-router-dom'
 import Styles from './App.module.css'
 import { Header } from './components/Header/Header'
@@ -24,6 +24,13 @@ import { Auth } from './pages/Auth/Auth'
 import { Admin } from "./pages/Admin/Admin"
 
 export const useRoutes = (isAuthentificated, userId) => {
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
+
     if (isAuthentificated) {
         return(
             <div className={Styles.main}>

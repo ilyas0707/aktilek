@@ -1,6 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
-import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
@@ -22,28 +21,31 @@ export const Admin = () => {
     const history = useHistory()
     const auth = useContext(AuthContext)
 
-    const { request, loading, API_URL } = useHttp()
+    const { request, API_URL } = useHttp()
     const successMessage = useSuccess()
     const errorMessage = useError()
     const [news, setNews] = useState({})
 
-    const postHandler = async () => {
+    useEffect(() => {
+        window.scrollTo(0,0);
+        return () => {
+            window.scrollTo(0,0);
+        }
+    })
+
+    const postHandler = async (type) => {
         try {
             const posted = await request(
-                `${API_URL}/api/news/add`,
+                `${API_URL}/api/${ type }/add`,
                 'POST',
                 { ...news },
                 {
                     Authorization: `Bearer ${ auth.token }`,
                 }
             )
-            if (posted.successful === false) {
-                errorMessage(posted.messageRU)
-            } else {
-                successMessage(posted.messageRU)
-            }
+            successMessage(posted.message)
         } catch (e) {
-            errorMessage(e.messageRU)
+            errorMessage(e.message)
         }
     }
 
@@ -107,7 +109,6 @@ export const Admin = () => {
         { type: 'file', name: 'imageUrl', placeholder: 'Фотография' },
         { type: 'text', name: 'heading', placeholder: 'Заголовок' },
         { type: 'text', name: 'date', placeholder: 'Дата' },
-        { type: 'text', name: 'description', placeholder: 'Описание' },
     ]
 
     return (
@@ -140,8 +141,9 @@ export const Admin = () => {
                             )
                         })
                     }
+                    <textarea className={Styles.input} onChange={changeHandler} name="description" cols="30" rows="10" placeholder="Описание"></textarea>
                     <div className={Styles.button}>
-                        <button onClick={ e => {e.preventDefault(); postHandler()} } className={Styles.submit} type={Styles.submit}>Создать</button>
+                        <button onClick={ e => {e.preventDefault(); postHandler('news')} } className={Styles.submit} type={Styles.submit}>Создать</button>
                     </div>
                 </form>
             </div>
