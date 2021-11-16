@@ -12,7 +12,7 @@ const morgan = require('morgan')
 app.use(
     cors({
         credentials: true,
-        origin: ['http://localhost:3000', 'http://aktilek.kg'],
+        origin: ['http://localhost:3000', 'http://aktilek.kg', 'https://aktilek.kg'],
         optionsSuccessStatus: 200,
     })
 )
